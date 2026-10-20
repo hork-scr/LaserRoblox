@@ -283,7 +283,7 @@ end
 
 -- Элементы управления
 movementTab:CreateToggle({
-    Name = "WalkSpeed (Скорость бега)",
+    Name = "WalkSpeed ",
     Callback = function(value)
         walkSpeedEnabled = value
         if not value and localPlayer.Character and localPlayer.Character:FindFirstChildOfClass("Humanoid") then
@@ -293,7 +293,7 @@ movementTab:CreateToggle({
 })
 
 movementTab:CreateSlider({
-    Name = "Значение скорости",
+    Name = "Speed",
     Range = { 16, 150 },
     Increment = 1,
     CurrentValue = 16,
@@ -304,7 +304,7 @@ movementTab:CreateSlider({
 })
 
 movementTab:CreateToggle({
-    Name = "JumpPower (Сила прыжка)",
+    Name = "JumpPower",
     Callback = function(value)
         jumpPowerEnabled = value
         if not value and localPlayer.Character and localPlayer.Character:FindFirstChildOfClass("Humanoid") then
@@ -314,7 +314,7 @@ movementTab:CreateToggle({
 })
 
 movementTab:CreateSlider({
-    Name = "Значение прыжка",
+    Name = "Power",
     Range = { 50, 300 },
     Increment = 5,
     CurrentValue = 50,
@@ -325,14 +325,14 @@ movementTab:CreateSlider({
 })
 
 movementTab:CreateToggle({
-    Name = "Noclip (Ходьба сквозь стены)",
+    Name = "Noclip",
     Callback = function(value)
         noclipEnabled = value
     end,
 })
 
 movementTab:CreateToggle({
-    Name = "Fly (Полёт)",
+    Name = "Fly",
     Callback = function(value)
         flyEnabled = value
         if flyEnabled then
@@ -344,7 +344,7 @@ movementTab:CreateToggle({
 })
 
 movementTab:CreateSlider({
-    Name = "Скорость полета",
+    Name = "Fly speed",
     Range = { 20, 200 },
     Increment = 5,
     CurrentValue = 50,
